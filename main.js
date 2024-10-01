@@ -3,12 +3,14 @@ const screen1 = document.querySelector(".screen1")
 const screen2 = document.querySelector(".screen2")
 const btnTry = document.querySelector("#btnTry")
 const btnReset = document.querySelector("#btnReset")
+const spanMaximumAttempts = document.querySelector("#maximumAttempts")
 
 let randomNumber = Math.round(Math.random() * 10) // aqui é um número aleatório
 let xAttempts = 1 // 1
 
 
 const maximumAttempts = 5 // 5
+spanMaximumAttempts.innerHTML = maximumAttempts
 
 
 // Eventos
