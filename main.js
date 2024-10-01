@@ -4,11 +4,11 @@ const screen2 = document.querySelector(".screen2")
 const btnTry = document.querySelector("#btnTry")
 const btnReset = document.querySelector("#btnReset")
 
-let randomNumber = Math.round(Math.random() * 10)
-let xAttempts = 1
+let randomNumber = Math.round(Math.random() * 10) // aqui é um número aleatório
+let xAttempts = 1 // 1
 
 
-const maximumAttempts = 
+const maximumAttempts = 5 // 5
 
 
 // Eventos
@@ -30,7 +30,7 @@ function handleTryClick(event) {
 
 
 
-    }   else if(inputNumber.value == maximumAttempts) {
+    }   else if(xAttempts == maximumAttempts) {
             toggleScreen()
             
             screen2.querySelector("h2").innerText = `Infelizmente acabaram as suas tentativas! O número correto era o ${randomNumber}!`
@@ -52,7 +52,7 @@ function handleTryClick(event) {
     }
 
     inputNumber.value = ""
-    xAttempts++
+    xAttempts = xAttempts + 1 // contador
 }
 
 function handleResetClick() {
